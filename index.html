@@ -20,60 +20,32 @@
     </center>
     <div id="app">
         <div class="menu">
-            <a href="blank" onclick="document.location.reload()">
-                <i class="fa fa-home" aria-hidden="true"></i> Home</a>
-            <span>
-                <input type="text" class="search rounded" placeholder="Search...">&nbsp;&nbsp;</span>
+            <input type="text" class="search rounded" placeholder="Search...">&nbsp;&nbsp;</span>
             <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>Shopping cart</a>
-
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>Shopping cart
         </div>
         <div class="blank"></div>
         <div class="follow_blank">
-            <a href="blank"></a>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div id="personal-data">Personal data...</div>
+    </div>
+    <br>
+    <!-- user is going to post new items here -->
+    <center>
+        <div class="col-lg-6">
+            <form id="post-items">Add items here
+                <div class="form-group">
+                    <label for="exampleTextarea"></label>
+                    <textarea class="form-control" id="item-message" rows="3"></textarea>
                 </div>
-                <!-- use is going to post new items here -->
-                <center>
-                    <div class="col-lg-6">
-                        <form id="post-items">
-                            <div class="form-group">
-                                <label for="exampleTextarea">Equipment</label>
-                                <textarea class="form-control" id="item-message" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Post</button>
-                        </form>
-                        <div id="items">
-                            <div class="menu2">
-                                <a href="blank">Edgar's equipment</a>
-                                <a href="https://twitter.com/raymondh/with_replies">Tweets & Replies</a>
-                                <a href="https://twitter.com/raymondh/media"> Media</a>
-                            </div>
-                        </div>
-                    </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+            <br>
+            <div id="items">
             </div>
-            </center>
-            <!-- might be shopping cart chart -->
-            <!-- <div class="col-lg-3">
-                    <div class="friends">
-                        <h4>You may also like...</h4>
-                        <div id="friends">
-                            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                    </div>
-                </div> -->
         </div>
-    </div>
-    </div>
-
+    </center>
     <script src="vendor/jquery.js"></script>
     <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <script src="inventory.js"></script>
     <script src="index.js"></script>
 </body>
 
