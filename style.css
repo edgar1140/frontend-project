@@ -1,0 +1,77 @@
+#app {
+    background-color: #e6ecf0;
+}
+
+body {
+    font-family: 'Righteous', cursive;
+    background-color: rgba(255, 255, 255, 0.527);
+}
+
+.menu a {
+    font-size: 20px;
+    padding: 10px;
+    color: rgba(0, 0, 88, 0.904);
+}
+
+.blank {
+    height: 20ex;
+    background-color: #fafafac0;
+    border-style: solid;
+    border-radius: 0.3px;
+    border-color: rgba(255, 255, 255, 0.938);
+}
+
+.follow_blank {
+    height: 4.5em;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-bottom-color: rgb(0, 91, 228);
+    border-bottom-width: 1px;
+}
+
+#chirps {
+    background-color: rgba(255, 255, 255, 0.603);
+    padding: 18px;
+    border-style: solid;
+    border-color: rgba(44, 44, 44, 0.103);
+    border-width: 4px;
+}
+
+.menu2 {
+    margin-left: -1.48em;
+    width: 39.6em;
+    height: 3em;
+    padding: 6px;
+    display: inline-block;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(175, 175, 175);
+    border-bottom-width: 1px;
+    padding-bottom: 6px;
+}
+.menu input[type='text'] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-left: 100ex;
+}
+
+.search {
+    padding: 6px 15px 6px 30px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.rounded {
+    border-radius: 15px;
+    -moz-background-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+#item-message {
+    width: 28em;
+    height: 20em;
+}
+
+.btn-primary {
+    margin-left: 7em;
+}
