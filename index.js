@@ -1,87 +1,94 @@
 var PAGE_DATA = {
-    Guitar: {
-        name: 'ibanez 12 string guitar',
-        price: '$299',
-        img_url:
-            'https://cdn.shopify.com/s/files/1/1898/9465/products/IBAAEG1812IIDVS-2_800x.jpg?v=1494014153',
-        stock: 65
-    }
-    //     Drums: {
-    //         name: 'DW 7pc drumset',
-    //         price: '$7,158',
-    //         img_url:
-    //             'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRe2X7JbdFzmB_-kghXgrjMlri_WMTgYMxvDAvGT2zL1BBocN0bUfpqkJ9x-4R2YC0QAQQi0URc&usqp=CAE',
-    //         stock: 15
-    //     },
-    //     Accordions: {
-    //         name: 'Hohner Panther HA3100FB FBbEb',
-    //         price: '$499',
-    //         img_url:
-    //             'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQk1MfKYtfr1aV1xNww8Ss7D4JNmZGfRlHgJUuxzQrKlqIBFGeqguZy4KzLK--Y9RHpiOuAjbM&usqp=CAE',
-    //         stock: 40
-    //     },
-    //     Mics: {
-    //         name: 'Shure SM58 Vocal Microphone',
-    //         price: '$89.00',
-    //         img_url:
-    //             'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSgLCBM99Qf_PsJNpjLJna-7N5_pFqPqcSXK5h2_bcVQ4DbVyqzERUOVDHTiSNtTPCysKEdZcY&usqp=CAE',
-    //         stock: 100
-    //     },
-    //     Speakers: {
-    //         name: 'JBL PRX425 15" Two-Way Loudspeaker System - Black',
-    //         price: '$749.00',
-    //         img_url:
-    //             'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQiwrt3W8RizMctNjifgaZk4TT6wX_NZ3OGxZbIhadx_dODkhXt&usqp=CAY',
-    //         stock: 30
-    //     }
+    products: [
+        {
+            item: 'Guitar',
+            name: 'Ibanez 12 string guitar',
+            price: '$299',
+            img_url:
+                'https://cdn.shopify.com/s/files/1/1898/9465/products/IBAAEG1812IIDVS-2_800x.jpg?v=1494014153',
+            stock: 65
+        },
+        {
+            item: 'Drum',
+            name: 'DW 7pc drumset',
+            price: '$7,158',
+            img_url:
+                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRe2X7JbdFzmB_-kghXgrjMlri_WMTgYMxvDAvGT2zL1BBocN0bUfpqkJ9x-4R2YC0QAQQi0URc&usqp=CAE',
+            stock: 15
+        },
+        {
+            item: 'Accordions',
+            name: 'Hohner Panther HA3100FB FBbEb',
+            price: '$499',
+            img_url:
+                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQk1MfKYtfr1aV1xNww8Ss7D4JNmZGfRlHgJUuxzQrKlqIBFGeqguZy4KzLK--Y9RHpiOuAjbM&usqp=CAE',
+            stock: 40
+        },
+        {
+            item: 'Mics',
+            name: 'Shure SM58 Vocal Microphone',
+            price: '$89.00',
+            img_url:
+                'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSgLCBM99Qf_PsJNpjLJna-7N5_pFqPqcSXK5h2_bcVQ4DbVyqzERUOVDHTiSNtTPCysKEdZcY&usqp=CAE',
+            stock: 100
+        },
+        {
+            item: 'Speakers',
+            name: 'JBL PRX425 15" Two-Way Loudspeaker System - Black',
+            price: '$749.00',
+            img_url:
+                'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQiwrt3W8RizMctNjifgaZk4TT6wX_NZ3OGxZbIhadx_dODkhXt&usqp=CAY',
+            stock: 30
+        }
+    ]
 };
 
-function items() {
-    var html =
-        '<h3>' +
-        PAGE_DATA.Guitar.name +
-        '</h3>' +
-        PAGE_DATA.Guitar.price +
-        '<img class="item-picture" src="' +
-        PAGE_DATA.Guitar.img_url +
-        '"> ' +
-        PAGE_DATA.Guitar.stock +
-        ' ';
-
+function items(inventory) {
+    var html = '<h3>' + inventory.item + '</h3>';
+    html += '<h3>' + inventory.name + '</h3>';
+    html += '<h4> Price: ' + inventory.price + '</h4>';
+    html += '<img class="item-picture" src="' + inventory.img_url + '"> ';
+    html += '<h4> In-Stock: ' + inventory.stock + '</h4>';
     return html;
 }
+
 function showItems() {
-    var html = items();
+    var html = PAGE_DATA.products.map(function(inventory) {
+        return items(inventory);
+    });
     $('#items').html(html);
 }
 
-function main() {
-    items();
-    showItems();
+function takeawayStock() {
+    var path = PAGE_DATA.products;
+
+    $('#guitar').on('click', function() {
+        path.stock -= 1;
+    });
 }
 
-// function makeItems(chirp) {
-//     var chrp = new Date();
-//     return {
-//         Guitar: {
-//             img: 'm',
-//             name: 'Raymond Hettinger',
-//             username: 'raymondh'
-//         },
-//         date: {
-//             month: chrp.getMonth(),
-//             day: chrp.getDate(),
-//             year: chrp.getFullYear()
-//         },
-//         message: chirp
-//     };
-// }
-// $('#post-items').on('submit', function(event) {
-//     event.preventDefault();
-//     var chirp = $('#item-message').val();
-//     PAGE_DATA.chirps.splice(0, 0, showItems(chirp));
-//     $('#item-message').val('');
-//     showItems();
-// });
+function makeItems(item, name, price, stock) {
+    return {
+        item: item,
+        name: name,
+        price: price,
+        stock: stock
+    };
+}
+$('#submit').on('click', function(event) {
+    event.preventDefault();
+    var item = $('#item-message').val();
+    var name = $('#name-message').val();
+    var price = $('#price-message').val();
+    var stock = $('#stock-message').val();
+    PAGE_DATA.products.splice(0, 0, makeItems(item, name, price, stock));
+    showItems();
+});
+
+function main() {
+    showItems();
+    takeawayStock();
+    makeItems();
+}
 
 $(main);
