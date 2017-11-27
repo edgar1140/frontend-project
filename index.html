@@ -33,15 +33,25 @@
     <center>
         <div class="col-lg-6">
             <form id="post-items">Add items here
+                <br>
                 <div class="form-group">
-                    <label for="exampleTextarea"></label>
-                    <textarea class="form-control" id="item-message" rows="3"></textarea>
+                    <input type="text" id="item-message" placeholder="Item type">
+                    <input type="text" id="name-message" placeholder="Name of product">
+                    <input type="text" id="price-message" placeholder="Price of product">
+                    <input type="text" id="stock-message" placeholder="Amount of item">
+                    <br>
+                    <br>
+                    <button type="submit" id="submit" class="btn btn-primary">Post</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Post</button>
             </form>
-            <br>
-            <div id="items">
-            </div>
+        </div>
+        <br>
+        <div id="items">
+            <button type="button" id="guitar" onclick="alert('Your item has been purchased!')">Buy Guitar</button> &nbsp;
+            <button type="button" onclick="alert('Your item has been purchased!')">Buy Accordion</button> &nbsp;
+            <button type="button" onclick="alert('Your item has been purchased!')">Buy Drum Set</button> &nbsp;
+            <button type="button" onclick="alert('Your item has been purchased!')">Buy Mic</button> &nbsp;
+            <button type="button" onclick="alert('Your item has been purchased!')">Buy Speaker</button> &nbsp;
         </div>
     </center>
     <script src="vendor/jquery.js"></script>
