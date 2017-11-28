@@ -1,42 +1,41 @@
 #app {
-    background-color: #e6ecf0;
+    background-color: #6f7b83;
 }
 
 body {
-    font-family: 'Righteous', cursive;
+    font-family: 'sans-serif';
     background-color: rgba(255, 255, 255, 0.527);
 }
 
 .menu a {
     font-size: 20px;
     padding: 10px;
-    color: rgba(0, 0, 88, 0.904);
+    color: rgba(52, 52, 148, 0.904);
 }
 
 .blank {
     height: 20ex;
-    background-color: #fafafac0;
+    background-color: #fafafabe;
     border-style: solid;
     border-radius: 0.3px;
-    border-color: rgba(255, 255, 255, 0.938);
+    border-color: rgba(255, 255, 255, 0.822);
 }
 
 .follow_blank {
     height: 3em;
-    background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-bottom-color: rgb(0, 91, 228);
-    border-bottom-width: 1px;
+    background-color: rgb(185, 183, 183);
+    /* border-style: solid; */
+    /* border-bottom-color: rgb(0, 91, 228); */
 }
 
 #items {
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: rgba(255, 254, 254, 0.603);
     padding: 10px;
     border-style: solid;
-    border-color: rgba(44, 44, 44, 0.103);
+    border-color: rgba(205, 194, 226, 0.233);
     border-width: 4px;
     width: 40em;
-    height: 60em;
+    height: 145em;
 }
 
 /* .menu2 {
@@ -64,10 +63,26 @@ body {
 }
 
 #item-message {
-    width: 28em;
-    height: 20em;
+    width: 10em;
+    height: 3em;
+}
+#name-message {
+    width: 10em;
+    height: 3em;
+}
+#img-message {
+    width: 10em;
+    height: 3em;
+}
+#price-message {
+    width: 10em;
+    height: 3em;
+}
+#stock-message {
+    width: 10em;
+    height: 3em;
 }
 
 .item-picture {
-    height: 20em;
+    height: 12em;
 }

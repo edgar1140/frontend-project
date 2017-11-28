@@ -49,6 +49,8 @@ function items(inventory) {
     html += '<h4> Price: ' + inventory.price + '</h4>';
     html += '<img class="item-picture" src="' + inventory.img_url + '"> ';
     html += '<h4> In-Stock: ' + inventory.stock + '</h4>';
+    html +=
+        '<i class="fa fa-shopping-cart" aria-hidden="true"></i > <button id="buy-btn"> ADD TO CART!</button><br><hr>';
     return html;
 }
 
@@ -57,14 +59,6 @@ function showItems() {
         return items(inventory);
     });
     $('#items').html(html);
-}
-
-function takeawayStock() {
-    var path = PAGE_DATA.products;
-
-    $('#guitar').on('click', function() {
-        path.stock -= 1;
-    });
 }
 
 function makeItems(item, name, price, stock) {
@@ -85,6 +79,11 @@ $('#submit').on('click', function(event) {
     showItems();
 });
 
+function takeawayStock() {
+    $('#buy-btn').on('click', function(event) {
+        PAGE_DATA.products.stock -= 1;
+    });
+}
 function main() {
     showItems();
     takeawayStock();
