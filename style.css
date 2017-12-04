@@ -3,16 +3,13 @@
 }
 
 body {
-    font-family: 'sans-serif';
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-family: 'Average Sans', sans-serif;
     background-color: rgba(255, 255, 255, 0.527);
 }
-
-.menu a {
-    font-size: 20px;
-    padding: 10px;
-    color: rgba(52, 52, 148, 0.904);
+#add-cart {
+    margin-left: 22ex;
 }
-
 .blank {
     height: 20ex;
     background-color: #fafafabe;
@@ -24,8 +21,6 @@ body {
 .follow_blank {
     height: 3em;
     background-color: rgb(185, 183, 183);
-    /* border-style: solid; */
-    /* border-bottom-color: rgb(0, 91, 228); */
 }
 
 #items {
@@ -35,31 +30,7 @@ body {
     border-color: rgba(205, 194, 226, 0.233);
     border-width: 4px;
     width: 40em;
-    height: 145em;
-}
-
-/* .menu2 {
-    margin-left: -1.48em;
-    width: 39.6em;
-    height: 30em;
-    padding: 6px;
-    display: inline-block;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(233, 19, 19);
-    border-bottom-width: 1px;
-    padding-bottom: 6px;
-} */
-
-.search {
-    padding: 6px 15px 6px 30px;
-    margin-left: 20px;
-    background-color: white;
-}
-
-.rounded {
-    border-radius: 15px;
-    -moz-background-radius: 15px;
-    -webkit-border-radius: 15px;
+    height: 180em;
 }
 
 #item-message {
