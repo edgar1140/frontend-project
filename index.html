@@ -6,31 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Edgar's Music Center</title>
-    <link rel="stylesheet" href "vendor/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Average+Sans|Encode+Sans+Semi+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <center>
-        <h1>
-            <i class="fa fa-music" aria-hidden="true"></i> Welcome to Edgar's Music Center
-            <i class="fa fa-music" aria-hidden="true"></i>
-        </h1>
-    </center>
-    <div id="app">
-        <div class="menu">
-            <input type="text" class="search rounded" placeholder="Search...">&nbsp;&nbsp;</span>
-            <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;
+        <div class="col-lg-12 col-sm-3">
+            <h1>
+                <i class="fa fa-music" aria-hidden="true"></i> Welcome to Edgar's Music Center
+                <i class="fa fa-music" aria-hidden="true"></i>
+            </h1>
+
         </div>
-        <div class="blank"></div>
-        <div class="follow_blank">
+    </center>
+    <div class="col-lg-12 col-sm-3">
+        <div id="app">
+            <div class="menu">
+                <i class="fa fa-cart-plus fa-4x" id="add-cart" aria-hidden="true"></i>
+            </div>
+            <div>
+
+                <h1>Your Order</h1>
+
+                <table id="checkout-cart" class="shopping-cart">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <div id="pricing">
+                    <p id="sub-total">
+                        <strong>Total</strong>:
+                        <span id="stotal"></span>
+                    </p>
+                </div>
+
+                <div id="user-details">
+                    <h2>Your Data</h2>
+                    <div id="user-details-content"></div>
+                </div>
+                <input type="submit" id="buy-btn" class="btn" value="Buy Now!" />
+
+            </div>
+            <div class="blank"></div>
+            <div class="follow_blank">
+            </div>
         </div>
     </div>
     <br>
     <!-- user is going to post new items here -->
     <center>
-        <div class="col-lg-6">
+        <div class="col-lg-12 col-sm-3">
             <form id="post-items">Add items here
                 <br>
                 <div class="form-group">
@@ -46,6 +81,7 @@
         </div>
         <br>
         <div id="items">
+
         </div>
     </center>
     <script src="vendor/jquery.js"></script>
